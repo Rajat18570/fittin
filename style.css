@@ -1,0 +1,497 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Press+Start+2P&family=Titillium+Web&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+}
+
+
+@import url("https://fonts.googleapis.com/css?family=Lato:400,700");
+
+:root {
+  --primaryColor: #f2c342;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #ececec;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+}
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  color: var(--mainBlack);
+  background: var(--mainWhite);
+  font-family: "Lato", sans-serif;
+}
+
+/* --------------- Navbar ---------------- */
+.navbar {
+    position: sticky;
+    top: 0;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background: rgb(231, 226, 221);
+    z-index: 1;
+  }
+
+  .navbar img {
+    height: 50px;
+  }
+
+  .navbar-center {
+    width: 100%;
+    max-width: 1170px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
+  .nav-icon {
+    font-size: 1.5rem;
+  }
+  .cart-btn {
+    position: relative;
+    cursor: pointer;
+  }
+  .cart-items {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background: var(--primaryColor);
+    padding: 0 5px;
+    border-radius: 30%;
+    color: var(--mainWhite);
+  }
+  /* --------------- End of Navbar ---------------- */
+
+  /* --------------- Hero ---------------- */
+.hero {
+    min-height: calc(100vh - 60px);
+    background: url("./img/banner.png") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content:flex-end;
+  }
+  .banner {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    display: inline-block;
+    padding: 2rem;
+    margin: 20px;
+  }
+  .banner-title {
+    font-size: 3.0rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    margin-bottom: 3rem;
+  }
+  .banner-btn {
+    padding: 1rem 3rem;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    font-size: 1rem;
+    background: var(--primaryColor);
+    color: var(--mainBlack);
+    border: 1px solid var(--primaryColor);
+    transition: var(--mainTransition);
+    cursor: pointer;
+  }
+  .banner-btn:hover {
+    background: transparent;
+    color: var(--primaryColor);
+  }
+  /* --------------- End of Hero ---------------- */
+
+  /*------------- Start of Facilities ------------- */
+  .facilities {
+    margin-left: 25px;
+    margin-top: 40px;
+  }
+
+  .grey {
+    color: rgb(184, 180, 180);
+  }
+
+  .card-container {
+    display: flex;
+    margin-top: 40px;
+
+  }
+
+  .card {
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 10px 20px;
+    transition: transform 0.2s ease-in;
+
+  }
+
+  .card:hover {
+    transform: translateY(-15px);
+  }
+
+  .card p {
+    font-size: 1.4rem;
+  }
+
+  /* ------ end of facilities ------ */
+
+  /*-------- start of BMI ------- */
+
+  .bmi-calc {
+    /* margin-left: 25px; */
+    margin: 40px;
+    background-color: rgb(253, 252, 240);
+    padding: 20px;
+  }
+
+
+
+
+.calculator {
+    display: flex;
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.container {
+    /* background: #fff; */
+    padding: 20px;
+    /* box-shadow: 0 4px 8px rgba(0,0,0,0.1); */
+    border-radius: 8px;
+    width: 100vw;
+    text-align: center;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+.div {
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin: 0 30px;
+    padding: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in;
+    background-color: white;
+    
+
+}
+h2 {
+    margin-bottom: 20px;
+}
+.input-group {
+    margin: 10px 0;
+}
+input[type="number"], select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+input[type="number"]:focus, select:focus {
+    border-color: #007BFF;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.result {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1.2em;
+    opacity: 0;
+    transition: opacity 0.5s, transform 0.5s;
+}
+.result.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #f2f2f2;
+} 
+
+/* end */
+
+/* ---- start of food cal ----- */
+
+.food-cal {
+    margin-left: 25px;
+    margin-top: 40px;
+}
+
+.food-con {
+    /* margin: 30px; */
+    width: 800px;
+    margin: 0 auto;
+   
+    display: flex;
+    flex-direction: column;
+    justify-items:center;
+    /* align-items: center; */
+    
+}
+
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+button:hover {
+    background-color: #0056b3;
+}
+.results {
+    margin-top: 20px;
+}
+.food-item {
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+}
+.food-item p {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+    margin: 0;
+}
+.food-item p.summary {
+    max-height: none;
+}
+.food-item.expanded p {
+    max-height: 1000px; /* large enough value to show full content */
+}
+.read-more {
+    color: #007BFF;
+    cursor: pointer;
+}
+
+.hid {
+    display: none;
+}
+
+.sho {
+    display: block;
+   
+}
+
+
+/* ----- end ------ */
+
+/* ---------- start of food ----------- */
+
+.food {
+   
+    margin: 40px;
+    background-color: rgb(243, 248, 236);
+    border-radius: 12px;
+    padding: 20px;
+    /* height: 400px; */
+}
+
+.blu {
+    background-color: rgb(236, 250, 255);
+    margin-top: 100px;
+
+}
+
+.cot {
+    /* width: 150px; */
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 0 10px;
+/* background-color: greenyellow; */
+width: 100%;
+
+}
+
+.cot-con {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+    width: 100%;
+}
+
+
+
+.cot img {
+    height: 240px;
+    width: 100%; 
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
+@media screen and (max-width: 915px) {
+.card p{
+    font-size: 1rem;
+}
+.cot h2 {
+    font-size: 20px;
+}
+.cot img {
+    height: 240px;
+}
+.cot {
+    margin: 0 8px;
+}
+}
+
+@media screen and (max-width: 850px) {
+    .food-con {
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 740px) {
+    .container {
+        flex-direction: column;
+    }
+    .card p {
+        font-size: 0.8rem;
+    }
+    input[type="text"] {
+        margin: 30px 0;
+    }
+    .cot h2 {
+        font-size: 15px;
+    }
+    .card-container {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .cot img {
+        height: 167px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .cot-con {
+        flex-direction: column;
+    }
+}
+
+.end {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.calorie-today {
+    margin-left: 25px;
+    margin: 40px;
+    background-color: honeydew;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+.calorie-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+.calorie-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+.calorie-table th, .calorie-table td {
+    padding: 10px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+.calorie-table th {
+    background-color: #f2f2f2;
+}
+.calorie-input {
+    width: 100%;
+    padding: 8px;
+    margin: 5px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.calorie-button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+.calorie-button:hover {
+    background-color: #0056b3;
+}
+.calorie-result {
+    margin-top: 20px;
+    text-align: center;
+}
+@media (max-width: 600px) {
+    .calorie-table, .calorie-table th, .calorie-table td {
+        display: block;
+        width: 100%;
+    }
+    .calorie-table th, .calorie-table td {
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+    .calorie-table th::before, .calorie-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 0;
+        width: 50%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}

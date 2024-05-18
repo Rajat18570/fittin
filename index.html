@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitten | Your fitness partner</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+        integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-center">
+            <span class="nav-icon">
+                <a href="#fac"> <i class="fas fa-bars"></i></a>
+               
+            </span>
+          <a href="#"> <img src="./img/logo.png" alt="store logo"></a> 
+            <div class="cart-btn">
+                <span class="nav-icon">
+                    <i class="fas fa-copyright"></i>
+                </span>
+                <!-- <div class="cart-items">1000</div> -->
+            </div>
+        </div>
+    </nav>
+    <!-- end of navbar -->
+    <!-- hero -->
+    <header class="hero">
+        <div class="banner">
+            <h1 class="banner-title">FITNESS IS <br> NOT AN OPTION</h1>
+            <a href="#fac"><button class="banner-btn">Let's start your journey</button></a>
+        </div>
+    </header>
+    <div class="facilities" id="fac">
+        <h2>Be Fit. <span class="grey">
+                Take a look what we have for your fitness
+            </span></h2>
+        <div class="card-container">
+            <a href="#bmi">
+                <div class="card">
+                    <i class="fas fa-heart-pulse"></i> <br>
+                    <p>Calculate your BMR and <br>
+                        know how much calorie you want</p>
+
+                </div>
+            </a>
+            <a href="#cal">
+                <div class="card">
+                    <i class="fas fa-burger"></i>
+                    <p>Know how much calories <br>
+                        your food has</p>
+
+                </div>
+            </a>
+            <a href="#today">
+                <div class="card">
+                    <i class="fas fa-egg"></i>
+                    <p>daily calorie counter <br>
+                        for you</p>
+                </div>
+            </a>
+            <a href="#food">
+                <div class="card">
+                    <i class="fas fa-carrot"></i>
+                    <p>Food suggestions made by <br> experienced doctors</p>
+
+                </div>
+            </a>
+            <a href="#life">
+                <div class="card">
+                    <i class="fas fa-life-ring"></i>
+                    <p>Lifestyle suggestions made by <br> experienced doctors</p>
+
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="bmi-calc" id="bmi">
+        <h2>Let's calculate your BMR <span class="grey">
+                and determine how much calorie you should consume
+            </span></h2>
+         <div class="calculator">
+            <div class="container">
+                <div class="div">
+                    <h2>BMR Calculator</h2>
+                    <div class="input-group">
+                        <input type="number" id="age" placeholder="Age (years)">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="weight" placeholder="Weight (kg)">
+                    </div>
+                    <div class="input-group">
+                        <input type="number" id="height" placeholder="Height (cm)">
+                    </div>
+                    <div class="input-group">
+                        <select id="gender">
+                            <option value="">Select Gender</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                    </div>
+                    <button onclick="calculateBMR()">Calculate BMR</button>
+                    <div id="bmrResult" class="result">Your BMR will be displayed here</div>
+                </div>
+                <p class="sho">Your calorie table will appear here</p>
+                <div class="div two">
+                    
+                    <table id="activityTable" style="display: none;">
+                        <thead>
+                            <tr>
+                                <th>Activity Level</th>
+                                <th>Calories per day</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Sedentary (little to no exercise)</td>
+                                <td id="sedentary"></td>
+                            </tr>
+                            <tr>
+                                <td>Lightly active (light exercise/sports 1-3 days/week)</td>
+                                <td id="lightlyActive"></td>
+                            </tr>
+                            <tr>
+                                <td>Moderately active (moderate exercise/sports 3-5 days/week)</td>
+                                <td id="moderatelyActive"></td>
+                            </tr>
+                            <tr>
+                                <td>Very active (hard exercise/sports 6-7 days a week)</td>
+                                <td id="veryActive"></td>
+                            </tr>
+                            <tr>
+                                <td>Extra active (very hard exercise/sports & physical job or 2x training)</td>
+                                <td id="extraActive"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+               
+               
+            </div>
+        
+         </div>
+      
+
+    </div>
+    <div class="food" id="food">
+        <h2>Some good food <span class="grey">
+            recommended by doctors
+        </span></h2>
+        <div class="cot-con">
+            <div class="cot">
+                <img src="./img/dairy.jpg" alt=""> <br>
+                   <h2>Dairy products for protein</h2>
+            </div>
+            <div class="cot">
+                <img src="./img/fruits.jpg" alt=""> <br>
+                   <h2>fruits and vegetables is a must</h2>
+            </div>
+            <div class="cot">
+                <img src="./img/nuts.jpg" alt=""> <br>
+                   <h2>imporove your thinking aboility <br> with power of nuts</h2>
+            </div>
+        </div>
+    </div>
+    <div class="food-cal" id="cal">
+        <h2>Food analysis. <span class="grey">
+            Know how healthy your food is for you
+        </span></h2>
+        <div class="food-con">
+            
+            <input type="text" id="foodQuery" placeholder="Enter food items (e.g., 1 apple, 1 cup orange juice)" required>
+            <button id="analyzeFood">Analyze Food</button>
+            <div id="nutritionResult" class="results"></div>
+        </div>
+    </div>
+
+   
+
+    <div class="food blu" id="life">
+        <h2>Good Lifestyle <span class="grey">
+            recommended by doctors
+        </span></h2>
+        <div class="cot-con">
+            <div class="cot">
+                <img src="./img/exercise.jpg" alt=""> <br>
+                   <h2>Exercise daily</h2>
+            </div>
+            <div class="cot">
+                <img src="./img/healthy.jpg" alt=""> <br>
+                   <h2>Eat healthy and in balance</h2>
+            </div>
+            <div class="cot">
+                <img src="./img/check-up.jpg" alt=""> <br>
+                   <h2>Go for regular check-ups</h2>
+            </div>
+        </div>
+    </div>
+
+    <div class="calorie-today" id="today">
+        <div class="cal-con-2">
+            <div class="calorie-container">
+                <h1>Daily Calorie Tracker</h1>
+                <table class="calorie-table">
+                    <thead>
+                        <tr>
+                            <th>Meal/Activity</th>
+                            <th>Description</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Breakfast</td>
+                            <td><input type="text" id="breakfastInput" class="calorie-input" placeholder="e.g., 2 eggs, 1 toast"></td>
+                        </tr>
+                        <tr>
+                            <td>Lunch</td>
+                            <td><input type="text" id="lunchInput" class="calorie-input" placeholder="e.g., 1 chicken sandwich"></td>
+                        </tr>
+                        <tr>
+                            <td>Dinner</td>
+                            <td><input type="text" id="dinnerInput" class="calorie-input" placeholder="e.g., 1 bowl pasta"></td>
+                        </tr>
+                        <tr>
+                            <td>Workout</td>
+                            <td><input type="text" id="workoutInput" class="calorie-input" placeholder="e.g., 30 minutes running"></td>
+                        </tr>
+                        <tr>
+                            <td>Calories Burned</td>
+                            <td><input type="text" id="caloriesBurnedInput" class="calorie-input" placeholder="e.g., 300"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button id="calculateCaloriesButton" class="calorie-button">Calculate Total Calories</button>
+                <div id="calorieResultContainer" class="calorie-result"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="end">
+      Copyright remains with fittin 2024  <i class="fas fa-copyright"></i>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="script2.js"></script>
+</body>
+
+</html>
